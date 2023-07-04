@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'practice-project';
   isAlertCheckAllowed = false;
+  alertStatusValue = 10;  // for success
 
   constructor() {
     setTimeout(() => {
       this.isAlertCheckAllowed = true;
     }, 2000);
+  }
+
+  onAlertStatusCheck (newVal: any) {
+    this.alertStatusValue = newVal.target.value;
   }
 }
