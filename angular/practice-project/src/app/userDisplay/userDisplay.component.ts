@@ -7,14 +7,24 @@ import {Component} from "@angular/core";
 })
 export class UserDisplayComponent {
   username = null;
-
+  allUsers: any = [];
   getUserName() {
+    this.username = this.allUsers.get(0);
     if (this.username != null)
       return this.username;
     return '';
   }
 
-  resetUsername() {
-    this.username = null;
+  resetUserList() {
+    this.allUsers = [];
+  }
+
+  addUser(newUser: any) {
+    if (newUser && !this.allUsers.includes(newUser))
+      this.allUsers.push(newUser);
+  }
+
+  getUserListSize() {
+    return this.allUsers.length;
   }
 }
