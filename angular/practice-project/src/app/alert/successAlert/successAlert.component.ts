@@ -5,4 +5,9 @@ import {Component} from "@angular/core";
   templateUrl: './successAlert.component.html',
   styleUrls: ['./successAlert.component.css']
 })
-export class SuccessAlertComponent{}
+export class SuccessAlertComponent{
+  alertValue = 10;
+  getAlertValue() {
+    return this.alertValue;
+  }
+}
