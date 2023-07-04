@@ -9,7 +9,7 @@
 <button class="btn btn-primary" [disabled]="!isAlertCheckAllowed" >Get Alert Message</button>
 <p>Alert value entered as: {{alertStatusValue}}</p>
 
-<app-success-alert></app-success-alert>
-<app-warning-alert></app-warning-alert>
+<app-success-alert *ngIf="alertStatusValue>=10"></app-success-alert>
+<app-warning-alert *ngIf="alertStatusValue<10"></app-warning-alert>
 </body>
 </html>
