@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {AlertComponent} from "./alert/alert.component";
 import {SuccessAlertComponent} from "./alert/successAlert/successAlert.component";
 import {WarningAlertComponent} from "./alert/warningAlert/warningAlert.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {WarningAlertComponent} from "./alert/warningAlert/warningAlert.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
