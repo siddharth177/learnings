@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice-project';
+  isAlertCheckAllowed = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.isAlertCheckAllowed = true;
+    }, 2000);
+  }
 }

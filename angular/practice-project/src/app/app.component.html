@@ -11,6 +11,8 @@
 <hr>
 
 <div>
+  <input class="m-2 p-2" placeholder="Enter alert value">
+  <button class="btn btn-primary" [disabled]="!isAlertCheckAllowed">Get Alert Message</button>
   <app-alert></app-alert>
 </div>
 </body>
