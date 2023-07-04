@@ -12,7 +12,8 @@
 </ng-container>
 
 <ng-container *ngIf="buttonLogs.length > 0">
-  <p *ngFor="let log of buttonLogs">{{log}}</p>
+  <p [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+     *ngFor="let log of buttonLogs; let i = index">{{log}} at {{timeLogs.at(i)}}</p>
 </ng-container>
 
 </body>

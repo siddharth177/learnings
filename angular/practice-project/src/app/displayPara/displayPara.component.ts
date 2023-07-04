@@ -9,6 +9,7 @@ export class DisplayParaComponent {
   hideText = false;
   buttonText = 'hide';
   buttonLogs: string[] = [];
+  timeLogs: Date[]= [];
 
   updateButtonText(newLog: any) {
     this.hideText = !this.hideText;
@@ -17,8 +18,10 @@ export class DisplayParaComponent {
     else
       this.buttonText = 'hide';
 
-    if(newLog)
-    this.addButtonLogs(newLog);
+    if(newLog) {
+      this.addButtonLogs(newLog);
+      this.timeLogs.push(new Date());
+    }
   }
 
   addButtonLogs(newLog: string) {
