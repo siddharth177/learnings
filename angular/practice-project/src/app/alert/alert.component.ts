@@ -18,4 +18,11 @@ export class AlertComponent{
   onAlertStatusCheck (newVal: any) {
     this.alertStatusValue = newVal.target.value;
   }
+
+  getAlertTextColor() {
+    if(this.alertStatusValue >= 10)
+      return 'green';
+
+    return 'red';
+  }
 }
