@@ -8,7 +8,7 @@
 
 <div class="container-fluid">
   <input type="text" class="form-control m-2" placeholder="Enter user name" [(ngModel)]="username">
-  <button class="btn btn-primary mb-2" (click)="resetUsername()">Rest UserName</button>
+  <button [disabled]="getUserName() === ''" class="btn btn-primary mb-2" (click)="resetUsername()">Rest UserName</button>
   <p>User name: {{getUserName()}}</p>
 </div>
 
