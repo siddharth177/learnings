@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<button class="btn btn-primary mb-2" (click)="updateButtonText(buttonText)">{{buttonText}}</button>
+<ng-container class="mb-2" *ngIf="!hideText">
+  <p>Secret Code: Tuna</p>
+</ng-container>
+
+<ng-container *ngIf="buttonLogs.length > 0">
+  <p *ngFor="let log of buttonLogs">{{log}}</p>
+</ng-container>
+
+</body>
+</html>

@@ -8,6 +8,7 @@ import {SuccessAlertComponent} from "./alert/successAlert/successAlert.component
 import {WarningAlertComponent} from "./alert/warningAlert/warningAlert.component";
 import {FormsModule} from "@angular/forms";
 import {UserDisplayComponent} from "./userDisplay/userDisplay.component";
+import {DisplayParaComponent} from "./displayPara/displayPara.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {UserDisplayComponent} from "./userDisplay/userDisplay.component";
     AlertComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
-    UserDisplayComponent
+    UserDisplayComponent,
+    DisplayParaComponent
   ],
   imports: [
     BrowserModule,
