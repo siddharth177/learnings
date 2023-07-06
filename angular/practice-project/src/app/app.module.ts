@@ -9,6 +9,8 @@ import {WarningAlertComponent} from "./alert/warningAlert/warningAlert.component
 import {FormsModule} from "@angular/forms";
 import {UserDisplayComponent} from "./userDisplay/userDisplay.component";
 import {DisplayParaComponent} from "./displayPara/displayPara.component";
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {DisplayParaComponent} from "./displayPara/displayPara.component";
     SuccessAlertComponent,
     WarningAlertComponent,
     UserDisplayComponent,
-    DisplayParaComponent
+    DisplayParaComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
