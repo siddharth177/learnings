@@ -9,7 +9,8 @@ import {Element} from "./element.model";
 export class AppComponent {
   title = 'practice-project';
 
-  serverElements: Element[] = [];
+  serverElements: Element[] = [{type: 'sample', name: 'sample', content: 'sample'}];
+
   newServerName = '';
   newServerContent = '';
 }
