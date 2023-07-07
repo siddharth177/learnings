@@ -1,4 +1,4 @@
-import {Component, Input, SimpleChanges, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, Input, SimpleChanges, ViewChild, ViewEncapsulation} from '@angular/core';
 import {Element} from "../element.model";
 
 @Component({
@@ -11,6 +11,8 @@ export class ServerElementComponent {
 
   // @ts-ignore
   @Input('srvElement') element: Element;
+  // @ts-ignore
+  @ViewChild('elementName', {static: true}) elementName: ElementRef;
 
   constructor() {
     console.log('constructor created');
@@ -23,6 +25,7 @@ export class ServerElementComponent {
 
   ngOnInit() {
     console.log("ngOnInit Called");
+    console.log('Element Name: ' + this.elementName.nativeElement.textContent); // elementName is not present before view creation
   }
 
   ngDoCheck() {
@@ -39,6 +42,7 @@ export class ServerElementComponent {
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called!');
+    console.log('Element Name:' + this.elementName.nativeElement.textContent);  // elementName will be present
   }
 
   ngAfterViewChecked() {
