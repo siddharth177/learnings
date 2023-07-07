@@ -15,4 +15,8 @@ export class ServerElementComponent {
   constructor() {
     console.log('constructor created');
   }
+
+  ngOnInit() {
+    console.log("ngOnInit Called");
+  }
 }
