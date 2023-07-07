@@ -9,8 +9,14 @@ import {Element} from "./element.model";
 export class AppComponent {
   title = 'practice-project';
 
-  serverElements: Element[] = [{type: 'sample', name: 'sample', content: 'sample'}];
+  serverElements: Element[] = [];
 
-  newServerName = '';
-  newServerContent = '';
+  onAddServer(serverElement: {name: string, content: string}) {
+    this.serverElements.push(new Element('server', serverElement.name, serverElement.content));
+  }
+
+  onAddBlueprint(blueprintElement: {name: string, content: string}) {
+    this.serverElements.push(new Element('blueprint', blueprintElement.name, blueprintElement.content));
+  }
+
 }

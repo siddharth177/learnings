@@ -8,9 +8,6 @@ import {Element} from "../element.model";
 })
 export class ServerElementComponent {
 
+  // @ts-ignore
   @Input('srvElement') element: Element;
-
-  constructor(element: Element) {
-    this.element = element;
-  }
 }
