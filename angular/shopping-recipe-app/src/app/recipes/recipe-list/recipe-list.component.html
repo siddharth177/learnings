@@ -5,5 +5,7 @@
 </div>
 <hr>
 <div class="row">
-<app-recipe-item *ngFor="let recipe of recipes"></app-recipe-item>
+  <div class="col-xs-12">
+    <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe"></app-recipe-item>
+  </div>
 </div>
