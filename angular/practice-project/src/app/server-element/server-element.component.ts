@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, SimpleChanges, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ContentChild, ElementRef, Input, SimpleChanges, ViewChild, ViewEncapsulation} from '@angular/core';
 import {Element} from "../element.model";
 
 @Component({
@@ -14,6 +14,9 @@ export class ServerElementComponent {
   // @ts-ignore
   @ViewChild('elementName', {static: true}) elementName: ElementRef;
 
+  // @ts-ignore
+  @ContentChild('serverParagraph', {static: true}) serverParagraph: ElementRef;
+
   constructor() {
     console.log('constructor created');
   }
@@ -26,6 +29,7 @@ export class ServerElementComponent {
   ngOnInit() {
     console.log("ngOnInit Called");
     console.log('Element Name: ' + this.elementName.nativeElement.textContent); // elementName is not present before view creation
+    console.log('server paragraph content: ' + this.serverParagraph.nativeElement.textContent); // content won't be available
   }
 
   ngDoCheck() {
@@ -43,6 +47,7 @@ export class ServerElementComponent {
   ngAfterViewInit() {
     console.log('ngAfterViewInit called!');
     console.log('Element Name:' + this.elementName.nativeElement.textContent);  // elementName will be present
+    console.log('server paragraph content: ' + this.serverParagraph.nativeElement.textContent); // content will be present after view initialization
   }
 
   ngAfterViewChecked() {
