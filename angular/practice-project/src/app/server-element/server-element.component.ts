@@ -24,4 +24,8 @@ export class ServerElementComponent {
   ngOnInit() {
     console.log("ngOnInit Called");
   }
+
+  ngDoCheck() {
+    console.log('ngDoCheck called!');
+  }
 }
