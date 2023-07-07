@@ -11,4 +11,8 @@ export class ServerElementComponent {
 
   // @ts-ignore
   @Input('srvElement') element: Element;
+
+  constructor() {
+    console.log('constructor created');
+  }
 }
