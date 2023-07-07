@@ -1,0 +1,5 @@
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+input {
+  background-color: darkred;
+  border: solid darkred;
+}

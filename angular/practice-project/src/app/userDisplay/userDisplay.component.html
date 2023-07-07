@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div class="container-fluid">
+  <input type="text" #newUser class="form-control m-2" placeholder="Enter user name">
+  <button class="btn btn-primary mb-2 me-2" (click)="addUser(newUser.value)">Add User</button>
+  <button [disabled]="getUserListSize() === 0" class="btn btn-primary mb-2" (click)="resetUserList()">Reset List
+  </button>
+  <p>User names</p>
+  <p class="list-unstyled" *ngFor="let user of allUsers">{{user}}</p>
+</div>
+
+</body>
+</html>

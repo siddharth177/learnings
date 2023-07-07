@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alerts</title>
+</head>
+<body>
+<input type="number" class="m-2 p-2 form-control" placeholder="Enter alert value" [(ngModel)]="alertStatusValue">
+<button class="btn btn-primary" [disabled]="!isAlertCheckAllowed" >Get Alert Message</button>
+<p class="mt-2 p-2" [ngStyle]="{backgroundColor: getAlertTextColor()}">Alert value entered as: {{alertStatusValue}}</p>
+<p class="mt-2 p-2" [ngStyle]="{backgroundColor: getAlertTextColor()}" [ngClass]="{basicTextClass: alertStatusValue < 100}">Value too large</p>
+<app-success-alert *ngIf="alertStatusValue>=10; else warningAlert;"></app-success-alert>
+<ng-template #warningAlert>
+  <app-warning-alert *ngIf="alertStatusValue<10"></app-warning-alert>
+</ng-template>
+</body>
+</html>
