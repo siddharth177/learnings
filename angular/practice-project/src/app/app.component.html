@@ -11,7 +11,8 @@
 <hr>
 <div class="container">
   <app-cockpit (onServerCreated)='onAddServer($event)'
-               (onBpCreated)='onAddBlueprint($event)'></app-cockpit>
+               (onBpCreated)='onAddBlueprint($event)'
+               (onReset)="onServerBlueprintLastRemove($event)"></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">

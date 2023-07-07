@@ -19,4 +19,10 @@ export class AppComponent {
     this.serverElements.push(new Element('blueprint', blueprintElement.name, blueprintElement.content));
   }
 
+  onServerBlueprintLastRemove(isReset: {removeLast: boolean}) {
+    if(isReset) {
+      this.serverElements.splice(this.serverElements.length - 1, 1);
+    }
+  }
+
 }
