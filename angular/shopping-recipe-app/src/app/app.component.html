@@ -6,13 +6,21 @@
 </head>
 <body>
 
-<app-header></app-header>
+<app-header (featureLoaded)="onFeatureLoaded($event)"></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <ng-container *ngIf="featureLoaded === 'none'">
       <app-recipes></app-recipes>
       <app-shopping-list></app-shopping-list>
+      </ng-container>
+      <ng-container *ngIf="featureLoaded === 'recipes'">
+        <app-recipes></app-recipes>
+      </ng-container>
+      <ng-container *ngIf="featureLoaded === 'shopping-list'">
+        <app-shopping-list></app-shopping-list>
+      </ng-container>
     </div>
   </div>
 </div>
