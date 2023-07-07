@@ -8,7 +8,9 @@
       <br><br>
       <ul class="list-group">
         <div *ngIf="onlyOdd">
-          <li class="list-group-item" *ngFor="let odd of odds">
+          <li class="list-group-item" *ngFor="let odd of odds"
+              [ngClass]="{odd: odd % 2 !== 0}"
+              [ngStyle]="{backgroundColor: 'yellow'}">
             {{odd}}
           </li>
         </div>
