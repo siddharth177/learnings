@@ -1,4 +1,4 @@
-import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {Component, Input, SimpleChanges, ViewEncapsulation} from '@angular/core';
 import {Element} from "../element.model";
 
 @Component({
@@ -14,6 +14,11 @@ export class ServerElementComponent {
 
   constructor() {
     console.log('constructor created');
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges called!');
+    console.log(changes);
   }
 
   ngOnInit() {
