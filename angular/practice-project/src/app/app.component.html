@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>This is the Main Application</h2>
+</div>
+<hr>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (newNumber)="getCurrentNumber($event)"
+                        (isPaused)="onPause($event)"
+                        (isCleared)="onClear()"></app-game-control>
+    </div>
+    <div class="col-xs-12">
+      <h1>{{currentNumber}}</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container" *ngFor="let number of allNumbers">
+      <ng-container *ngIf="number % 2 === 0">
+        <app-even>
+          <p style="color: cornflowerblue"> {{number}}
+          </p>
+        </app-even>
+      </ng-container>
+      <ng-container *ngIf="number % 2 !== 0">
+        <app-odd>
+          <p style="color: darkolivegreen"> {{number}}
+          </p>
+        </app-odd>
+      </ng-container>
+    </div>
+  </div>
+</div>
