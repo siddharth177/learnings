@@ -19,4 +19,11 @@ export class ShoppingListService {
     this._ingredients.push(ingredient);
     this.onIngredientListChanged.emit(this.ingredients);
   }
+
+  onMoveToShoppingList(ingredients: Ingredient[]) {
+    if(ingredients) {
+      this._ingredients.push(...ingredients);
+      this.onIngredientListChanged.emit(this.ingredients);
+    }
+  }
 }
