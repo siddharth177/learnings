@@ -9,18 +9,7 @@ import {AccountsService} from "./services/accounts.service";
   providers: []
 })
 export class AppComponent implements OnInit{
-  // @ts-ignore
-  title: 'services-practice-project';
-
-  accounts: {name: string, status: string}[] = [];
-
-  constructor(private accountService: AccountsService) {
-    this.accounts = this.accountService.accounts;
+  ngOnInit(): void {
   }
 
-  ngOnInit() {
-    this.accounts = this.accountService.accounts;
-  }
-
-  protected readonly AccountsService = AccountsService;
 }
