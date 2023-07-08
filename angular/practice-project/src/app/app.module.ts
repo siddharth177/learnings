@@ -21,6 +21,7 @@ import { UnlessDirective } from './unless.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import {AccountsService} from "./services/accounts.service";
+import {LoggingService} from "./services/logging.service";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import {AccountsService} from "./services/accounts.service";
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AccountsService],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
