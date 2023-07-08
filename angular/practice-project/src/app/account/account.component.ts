@@ -1,12 +1,20 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {LoggingService} from "../services/logging.service";
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.css'],
+  providers: [LoggingService]
 })
 export class AccountComponent {
+
+  // private loggingService?: LoggingService;
+
+  constructor(private loggingService: LoggingService) {
+    this.loggingService = inject(LoggingService);
+  }
+
 
   // @ts-ignore
   @Input() account: { name: string, status: string };
@@ -17,7 +25,6 @@ export class AccountComponent {
 
   onSetTo(status: string) {
     this.statusChanged.emit({id: this.id, newStatus: status});
-    const loggingService = new LoggingService();
-    loggingService.logStatusChange(status);
+    this.loggingService.logStatusChange(status);
   }
 }
