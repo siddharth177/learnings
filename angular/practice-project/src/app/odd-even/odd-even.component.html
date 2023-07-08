@@ -20,6 +20,12 @@
 <!--          </li>-->
 <!--        </div>-->
       </ul>
+      <div  ngSwitch="value">
+        <p *ngSwitchCase="5">value is 5</p>
+        <p *ngSwitchCase="15">value is 15</p>
+        <p *ngSwitchCase="115">value is 115</p>
+        <p *ngSwitchDefault>value is default</p>
+      </div>
       <p appBasicHighlight>Styled with basic selector</p>
       <p appBetterHighlight defaultColor="yellow" highlightColor="green">Styled with basic selector</p>
     </div>
