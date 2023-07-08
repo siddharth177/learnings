@@ -12,9 +12,7 @@ export class AccountComponent {
 
   // private loggingService?: LoggingService;
 
-  constructor(private loggingService: LoggingService,
-              private accountService: AccountsService) {
-    this.loggingService = inject(LoggingService);
+  constructor(private accountService: AccountsService) {
   }
 
 
@@ -25,7 +23,7 @@ export class AccountComponent {
 
 
   onSetTo(status: string) {
-    this.loggingService.logStatusChange(status);
+    this.accountService.onStatusChanged({id: this.id, newStatus: status});
     this.accountService.onStatusChange.emit(status);
   }
 }
