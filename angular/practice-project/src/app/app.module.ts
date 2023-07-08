@@ -26,7 +26,13 @@ import {ServerComponent} from "./servers/server/server.component";
 import {EditServerComponent} from "./servers/edit-server/edit-server.component";
 import {UsersComponent} from "./users/users.component";
 import {UserComponent} from "./users/user/user.component";
+import {RouterModule, Routes} from "@angular/router";
 
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'users', component: UsersComponent},
+  {path: 'servers', component: ServersComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +62,8 @@ import {UserComponent} from "./users/user/user.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
