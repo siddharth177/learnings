@@ -9,6 +9,15 @@ import {WarningAlertComponent} from "./alert/warningAlert/warningAlert.component
 import {FormsModule} from "@angular/forms";
 import {UserDisplayComponent} from "./userDisplay/userDisplay.component";
 import {DisplayParaComponent} from "./displayPara/displayPara.component";
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
+import { EvenComponent } from './game-control/even/even.component';
+import { OddEvenComponent } from './odd-even/odd-even.component';
+import {BasicHighlightDirective} from "./basicHighlight/basic-highlight.directive";
+import { BetterHighlightDirective } from './basicHighlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +26,16 @@ import {DisplayParaComponent} from "./displayPara/displayPara.component";
     SuccessAlertComponent,
     WarningAlertComponent,
     UserDisplayComponent,
-    DisplayParaComponent
+    DisplayParaComponent,
+    CockpitComponent,
+    ServerElementComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
+    OddEvenComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
