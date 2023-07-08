@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -13,8 +13,18 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLoadServer() {
-    this.router.navigate(['./servers']);
+  onLoadServer(id?: number) {
+    if (id) {
+      this.router.navigate(
+        ['/servers', id, 'edit'],
+        {
+          queryParams: {allowEdit: '1'},
+          fragment: 'loading'
+        });
+    }
+    else {
+      this.router.navigate(['./servers']);
+    }
   }
 
 }

@@ -10,6 +10,7 @@ import {Subscription} from "rxjs";
 export class UserComponent implements OnInit, OnDestroy {
   // @ts-ignore
   user: { id: number, name: string };
+  // @ts-ignore
   paramSubscription: Subscription;
 
   constructor(private activatedRoute: ActivatedRoute) {
