@@ -20,11 +20,6 @@ import { BetterHighlightDirective } from './basicHighlight/better-highlight.dire
 import { UnlessDirective } from './unless.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
-import {AccountsService} from "./services/accounts.service";
-import {LoggingService} from "./services/logging.service";
-import { UsersComponent } from './users/users.component';
-import { ActiveUsersComponent } from './users/active-users/active-users.component';
-import { InactiveUsersComponent } from './users/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +39,7 @@ import { InactiveUsersComponent } from './users/inactive-users/inactive-users.co
     BetterHighlightDirective,
     UnlessDirective,
     AccountComponent,
-    NewAccountComponent,
-    UsersComponent,
-    ActiveUsersComponent,
-    InactiveUsersComponent
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
