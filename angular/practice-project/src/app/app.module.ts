@@ -22,6 +22,9 @@ import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import {AccountsService} from "./services/accounts.service";
 import {LoggingService} from "./services/logging.service";
+import { UsersComponent } from './users/users.component';
+import { ActiveUsersComponent } from './users/active-users/active-users.component';
+import { InactiveUsersComponent } from './users/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import {LoggingService} from "./services/logging.service";
     BetterHighlightDirective,
     UnlessDirective,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    UsersComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,

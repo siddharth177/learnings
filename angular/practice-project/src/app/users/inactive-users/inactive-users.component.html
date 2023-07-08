@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <ng-container *ngIf="user.status === 'inactive'">
+    <li class="list-group-item">
+      {{user.name}} | <a href="#" (click)="onStatusChange()">Set to Active</a>
+    </li>
+  </ng-container>
+</ul>
