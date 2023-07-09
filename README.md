@@ -17,3 +17,5 @@ For the latest and updated documentation please refer: <a href="https://www.noti
     Currently, the repository contains learning material on
         * Angular
         * Git
+        * Junit 5
+        * Mockito
