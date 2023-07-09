@@ -34,7 +34,7 @@ const appRoutes: Routes = [
   {path: 'users/:id/:name', component: UserComponent},
   {
     path: 'servers', component: ServersComponent, children: [
-      {path: ':id/edit', component: ServerComponent},
+      {path: ':id/edit', component: EditServerComponent},
       {path: ':id', component: ServerComponent}
     ]
   }
