@@ -39,6 +39,7 @@ const appRoutes: Routes = [
       {path: ':id', component: ServerComponent}
     ]
   },
+  {path: 'server', redirectTo: '/servers', pathMatch: 'full'},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}    // should be at the last route in the list
 ]
