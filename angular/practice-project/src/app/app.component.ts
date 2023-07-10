@@ -9,6 +9,9 @@ import {AccountsService} from "./services/accounts.service";
   providers: []
 })
 export class AppComponent implements OnInit{
+
+  // @ts-ignore
+  title: 'routing-practice-project';
   ngOnInit(): void {
   }
 

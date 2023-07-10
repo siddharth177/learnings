@@ -20,11 +20,15 @@ import { BetterHighlightDirective } from './basicHighlight/better-highlight.dire
 import { UnlessDirective } from './unless.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
-import {AccountsService} from "./services/accounts.service";
-import {LoggingService} from "./services/logging.service";
-import { UsersComponent } from './users/users.component';
-import { ActiveUsersComponent } from './users/active-users/active-users.component';
-import { InactiveUsersComponent } from './users/inactive-users/inactive-users.component';
+import {HomeComponent} from "./home/home.component";
+import {ServersComponent} from "./servers/servers.component";
+import {ServerComponent} from "./servers/server/server.component";
+import {EditServerComponent} from "./servers/edit-server/edit-server.component";
+import {UsersComponent} from "./users/users.component";
+import {UserComponent} from "./users/user/user.component";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+
 
 @NgModule({
   declarations: [
@@ -45,14 +49,20 @@ import { InactiveUsersComponent } from './users/inactive-users/inactive-users.co
     UnlessDirective,
     AccountComponent,
     NewAccountComponent,
+    HomeComponent,
+    ServersComponent,
+    ServerComponent,
+    EditServerComponent,
     UsersComponent,
-    ActiveUsersComponent,
-    InactiveUsersComponent
+    UserComponent,
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

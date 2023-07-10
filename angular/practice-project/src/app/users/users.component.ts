@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import {UsersService} from "../services/users.service";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -7,13 +6,18 @@ import {UsersService} from "../services/users.service";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-
-  users: {name: string, status: string}[] = [];
-
-  constructor(private userService: UsersService) {
-  }
-
-  ngOnInit() {
-    this.users = this.userService.users;
-  }
+  users = [
+    {
+      id: 1,
+      name: 'Max'
+    },
+    {
+      id: 2,
+      name: 'Anna'
+    },
+    {
+      id: 3,
+      name: 'Chris'
+    }
+  ];
 }
