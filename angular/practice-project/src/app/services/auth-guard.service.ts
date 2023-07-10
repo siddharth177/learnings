@@ -23,4 +23,9 @@ export class AuthGuardService {
         }
       );
   }
+
+  canActivateChild(route: ActivatedRoute, state: RouterStateSnapshot)
+    : Observable<boolean> | Promise<boolean> | boolean {
+    return this.canActivate(route, state);
+  }
 }
