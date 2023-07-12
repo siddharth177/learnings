@@ -25,6 +25,8 @@ import {ServerComponent} from "./servers/server/server.component";
 import {EditServerComponent} from "./servers/edit-server/edit-server.component";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ServerComponent,
     EditServerComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

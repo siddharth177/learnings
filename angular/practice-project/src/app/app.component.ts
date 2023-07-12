@@ -11,7 +11,7 @@ import {AccountsService} from "./services/accounts.service";
 export class AppComponent implements OnInit{
 
   // @ts-ignore
-  title: 'routing-practice-project';
+  title: 'observable-practice-project';
   ngOnInit(): void {
   }
 
