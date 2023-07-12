@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Recipe} from "../recipe.model";
 import {ShoppingListService} from "../../services/shopping-list.service";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {RecipeService} from "../../services/recipe.service";
 
 @Component({
@@ -16,6 +16,7 @@ export class RecipeDetailComponent {
 
   constructor(private shoppingListService: ShoppingListService,
               private route: ActivatedRoute,
+              private router: Router,
               private recipeService: RecipeService) {
   }
 
@@ -29,6 +30,10 @@ export class RecipeDetailComponent {
   }
   onMoveToShoppingList() {
     this.shoppingListService.onMoveToShoppingList(this.recipe.ingredients);
+  }
+
+  onRecipeEdit() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
   }
 
 }
