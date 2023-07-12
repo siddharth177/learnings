@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {interval, Subscription} from "rxjs";
+import {interval, Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,19 @@ export class HomeComponent {
   // @ts-ignore
   private subscription: Subscription;
   ngOnInit() {
-    this.subscription = interval(1000).subscribe(cnt => {
-      console.log(cnt);
-    })
+    // @ts-ignore
+    const customIntervalObservable = new Observable((observer) => {
+      let cnt = 0;
+      setInterval(() => {
+        observer.next(cnt++);
+      }, 1000)
+    });
+
+    // @ts-ignore
+    this.subscription = customIntervalObservable.subscribe((count) => {
+      console.log(count);
+    });
+
   }
 
   ngOnDestroy() {
