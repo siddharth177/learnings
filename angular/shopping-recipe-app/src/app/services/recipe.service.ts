@@ -15,8 +15,6 @@ export class RecipeService {
       [new Ingredient('meat', 2), new Ingredient('chilli', 1)])
   ];
 
-  recipeSelected = new EventEmitter<Recipe>();
-
   constructor() {
   }
 
