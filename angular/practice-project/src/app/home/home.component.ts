@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {interval, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  // @ts-ignore
+  private subscription: Subscription;
+  ngOnInit() {
+    this.subscription = interval(1000).subscribe(cnt => {
+      console.log(cnt);
+    })
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
