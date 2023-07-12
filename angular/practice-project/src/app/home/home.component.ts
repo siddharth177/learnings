@@ -16,13 +16,24 @@ export class HomeComponent {
       let cnt = 0;
       setInterval(() => {
         observer.next(cnt++);
+        if(cnt === 3)
+          observer.complete();
+        if(cnt > 5)
+          observer.error(new Error('count greater than 5'));
       }, 1000)
     });
 
     // @ts-ignore
     this.subscription = customIntervalObservable.subscribe((count) => {
-      console.log(count);
-    });
+        console.log(count);
+      },
+      (error) => {
+        console.log(error);
+        alert('counter greater than required');
+      },
+      () => {
+        console.log('observer completed');
+      });
 
   }
 
