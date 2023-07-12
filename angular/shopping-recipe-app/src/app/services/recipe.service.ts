@@ -24,5 +24,8 @@ export class RecipeService {
     return this._recipes.slice(); // will return a copy of the recipe list
   }
 
+  getRecipeById(id: number) {
+    return this.recipes[id];
+  }
 
 }
