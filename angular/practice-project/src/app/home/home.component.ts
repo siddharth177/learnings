@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {interval, Observable, Subscription} from "rxjs";
+import {filter, map} from "rxjs/operators";
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,12 @@ export class HomeComponent {
     });
 
     // @ts-ignore
-    this.subscription = customIntervalObservable.subscribe((count) => {
+    this.subscription = customIntervalObservable.pipe(filter((data: number) => {
+        return data > 0;
+      }),
+      map((data: number) => {
+        return 'Round: ' + (data + 1);
+      })).subscribe((count) => {
         console.log(count);
       },
       (error) => {
