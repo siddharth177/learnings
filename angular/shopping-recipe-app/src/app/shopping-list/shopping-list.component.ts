@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Ingredient} from "../shared/ingredient.model";
 import {ShoppingListService} from "../services/shopping-list.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-shopping-list',
@@ -9,16 +10,21 @@ import {ShoppingListService} from "../services/shopping-list.service";
 })
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[] = [];
+  private _ingredientChangeSubs: Subscription;
 
   constructor(private shoppingListService: ShoppingListService) {
   }
 
   ngOnInit() {
     this.ingredients = this.shoppingListService.ingredients;  // will get a copy of ingredients list
-    this.shoppingListService.onIngredientListChanged.subscribe(
+    this._ingredientChangeSubs = this.shoppingListService.onIngredientListChanged.subscribe(
       (ingredients: Ingredient[]) => {
         this.ingredients = this.shoppingListService.ingredients;
       }
     ) // will get new instance of ingredient list when a change occurs in the list
+  }
+
+  ngOnDestroy() {
+    this._ingredientChangeSubs.unsubscribe();
   }
 }
