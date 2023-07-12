@@ -20,14 +20,13 @@ import { BetterHighlightDirective } from './basicHighlight/better-highlight.dire
 import { UnlessDirective } from './unless.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
-import {HomeComponent} from "./home/home.component";
 import {ServersComponent} from "./servers/servers.component";
 import {ServerComponent} from "./servers/server/server.component";
 import {EditServerComponent} from "./servers/edit-server/edit-server.component";
-import {UsersComponent} from "./users/users.component";
-import {UserComponent} from "./users/user/user.component";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -49,14 +48,13 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     UnlessDirective,
     AccountComponent,
     NewAccountComponent,
-    HomeComponent,
     ServersComponent,
     ServerComponent,
     EditServerComponent,
-    UsersComponent,
-    UserComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
