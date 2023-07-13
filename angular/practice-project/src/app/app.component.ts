@@ -12,12 +12,16 @@ import {Subscription} from "rxjs";
 })
 export class AppComponent implements OnInit, OnDestroy {
   // @ts-ignore
-  title: '';
+  title: 'handling-forms-practice-project';
 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  suggestUserName() {
+    const suggestedName = 'Superuser';
   }
 
   ngOnDestroy() {
