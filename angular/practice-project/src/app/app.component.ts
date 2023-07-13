@@ -15,6 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   // @ts-ignore
   title: 'handling-forms-practice-project';
   defaultQuestion = 'pet';
+  answer = '';
 
   // @ts-ignore
   @ViewChild('f') signupForm: NgForm;
