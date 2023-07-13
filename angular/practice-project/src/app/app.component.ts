@@ -14,6 +14,7 @@ import {NgForm} from "@angular/forms";
 export class AppComponent implements OnInit, OnDestroy {
   // @ts-ignore
   title: 'handling-forms-practice-project';
+  defaultQuestion = 'pet';
 
   // @ts-ignore
   @ViewChild('f') signupForm: NgForm;
