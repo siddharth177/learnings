@@ -22,6 +22,10 @@ export class UserComponent {
     });
   }
 
+  suggestUserName() {
+    const suggestedName = 'Superuser';
+  }
+
   onActivate() {
     this.userService.activateEmitter.next(true);
   }

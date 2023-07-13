@@ -1,22 +1,34 @@
+<html>
+<body>
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <a routerLink="/">Home</a> |
-      <a [routerLink]="['user', 1]">
-        User 1
-      </a>
-      |
-      <a [routerLink]="['user', 2]">
-        User 2
-      </a>
-    </div>
-  </div>
-  <hr />
-  <p *ngIf="isActivated">Activated</p>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form #signupForm = "ngForm" (ngSubmit)="onsubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control"
+               ngModel name="email" #email="ngModel"
+               required email>
+        <span class="help-block" style="color: red" *ngIf="email.invalid && email.touched">enter a valid email</span>
+      </div>
+      <div class="form-group">
+        <label for="subscription">Select Subscription</label>
+        <select class="form-control" name="subscription" id="subscription"
+                [ngModel]="selectedSubscription">
+          <option *ngFor="let subscription of subscriptions"
+                  value="subscription"> {{subscription}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="password"> Password </label>
+        <input class="form-control" type="password" id="password"
+               ngModel name="password" #password="ngModel" required>
+        <span class="help-block" style="color: red" *ngIf="password.invalid && password.touched">enter a valid password</span>
+      </div>
+      <p class="help-block" style="color: red" *ngIf="signupForm.invalid && signupForm.touched">form inputs are invalid!</p>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
   </div>
 </div>
+</body>
+</html>

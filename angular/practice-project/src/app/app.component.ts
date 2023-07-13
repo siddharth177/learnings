@@ -1,8 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Element} from "./element.model";
-import {AccountsService} from "./services/accounts.service";
-import {UserService} from "./user/user.service";
-import {Subscription} from "rxjs";
+import {Component, ViewChild} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -10,26 +7,15 @@ import {Subscription} from "rxjs";
   styleUrls: ['./app.component.css'],
   providers: []
 })
-export class AppComponent implements OnInit, OnDestroy{
-
-  isActivated = false;
+export class AppComponent {
   // @ts-ignore
-  private activateSubs: Subscription;
-
+  title: 'handling-forms-practice-project';
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
+  selectedSubscription = 'Basic';
   // @ts-ignore
-  title: 'observable-practice-project';
+  @ViewChild('signupForm') signupForm: NgForm;
 
-  constructor(private userService: UserService) {
+  onsubmit() {
+
   }
-
-  ngOnInit(): void {
-    this.activateSubs = this.userService.activateEmitter.subscribe(
-      (activateStatus) => {this.isActivated = activateStatus;}
-    );
-  }
-
-  ngOnDestroy() {
-    this.activateSubs.unsubscribe();
-  }
-
 }
