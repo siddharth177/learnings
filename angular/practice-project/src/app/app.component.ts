@@ -3,6 +3,7 @@ import {Element} from "./element.model";
 import {AccountsService} from "./services/accounts.service";
 import {UserService} from "./user/user.service";
 import {Subscription} from "rxjs";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+  }
+
+  onSubmit(formElement: NgForm) {
+    console.log('name: ' + formElement.value['username'] );
+
   }
 
   ngOnDestroy() {
