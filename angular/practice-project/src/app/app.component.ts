@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   // @ts-ignore
   title: 'handling-forms-practice-project';
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
+  selectedSubscription = 'Basic';
+  // @ts-ignore
+  @ViewChild('signupForm') signupForm: NgForm;
+
+  onsubmit() {
+
+  }
 }
