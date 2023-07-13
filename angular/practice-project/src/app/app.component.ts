@@ -29,6 +29,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    })
   }
 
   onSubmit() {
