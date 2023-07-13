@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(formElement: NgForm) {
-    console.log('name: ' + formElement.value['username'] );
+    console.log(ngForm );
 
   }
 
