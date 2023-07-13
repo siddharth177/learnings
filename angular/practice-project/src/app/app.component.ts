@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Element} from "./element.model";
 import {AccountsService} from "./services/accounts.service";
 import {UserService} from "./user/user.service";
@@ -15,6 +15,9 @@ export class AppComponent implements OnInit, OnDestroy {
   // @ts-ignore
   title: 'handling-forms-practice-project';
 
+  // @ts-ignore
+  @ViewChild('f') signupForm: NgForm;
+
   constructor() {
   }
 
@@ -25,8 +28,8 @@ export class AppComponent implements OnInit, OnDestroy {
     const suggestedName = 'Superuser';
   }
 
-  onSubmit(formElement: NgForm) {
-    console.log(ngForm );
+  onSubmit() {
+    console.log(this.signupForm);
 
   }
 
