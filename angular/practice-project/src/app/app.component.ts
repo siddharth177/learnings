@@ -16,7 +16,15 @@ export class AppComponent implements OnInit, OnDestroy {
   title: 'handling-forms-practice-project';
   defaultQuestion = 'pet';
   answer = '';
-  genders = ['male', 'female']
+  genders = ['male', 'female'];
+  formSubmitted: boolean = false;
+  user = {
+    username: '',
+    email: '',
+    secretQuestion: '',
+    answer: '',
+    gender: ''
+  };
 
   // @ts-ignore
   @ViewChild('f') signupForm: NgForm;
@@ -38,7 +46,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     console.log(this.signupForm);
+    this.formSubmitted = true;
 
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.secretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
   }
 
   ngOnDestroy() {
