@@ -10,26 +10,17 @@ import {Subscription} from "rxjs";
   styleUrls: ['./app.component.css'],
   providers: []
 })
-export class AppComponent implements OnInit, OnDestroy{
-
-  isActivated = false;
+export class AppComponent implements OnInit, OnDestroy {
   // @ts-ignore
-  private activateSubs: Subscription;
+  title: '';
 
-  // @ts-ignore
-  title: 'observable-practice-project';
-
-  constructor(private userService: UserService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.activateSubs = this.userService.activateEmitter.subscribe(
-      (activateStatus) => {this.isActivated = activateStatus;}
-    );
   }
 
   ngOnDestroy() {
-    this.activateSubs.unsubscribe();
   }
 
 }
