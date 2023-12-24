@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/text_widget.dart';
 
-Alignment startAlignment = Alignment.topRight;
-Alignment endAlignment = Alignment.topLeft;
+final Alignment startAlignment =
+    Alignment.topRight; // value never changes again
+const Alignment endAlignment = Alignment
+    .topLeft; // we can't resign the variable and get locked in during the code is compiled
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
