@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
-  const TextWidget({super.key});
+  const TextWidget(this.text, {super.key});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Hello World!',
+    return Text(
+      text,
       style: TextStyle(color: Colors.white, fontSize: 28),
     );
   }
