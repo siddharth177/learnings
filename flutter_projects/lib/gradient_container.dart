@@ -7,14 +7,16 @@ const Alignment endAlignment = Alignment
     .topLeft; // we can't resign the variable and get locked in during the code is compiled
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.colors, {super.key});
+
+  final List<Color> colors;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: const [Colors.yellow, Colors.red],
+          colors: colors,
           begin: startAlignment,
           end: endAlignment,
         ),
