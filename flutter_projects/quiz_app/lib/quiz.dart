@@ -22,8 +22,15 @@ class _QuizState extends State<Quiz> {
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionsScreen();
+      activeScreen = QuestionsScreen(chooseAnswer);
     });
+  }
+
+  List<String> selectedAnswers = [];
+
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
+    print('answers: ' + selectedAnswers.toString());
   }
 
   @override
