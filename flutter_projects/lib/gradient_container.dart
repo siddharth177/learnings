@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/text_widget.dart';
 
 final Alignment startAlignment =
     Alignment.topRight; // value never changes again
@@ -21,7 +20,9 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(child: TextWidget('Hello World')),
+      child: Center(
+        child: Image.asset('assets/dice_images/dice-1.png', width: 200),
+      ),
     );
   }
 }
