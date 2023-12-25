@@ -36,7 +36,10 @@ class _QuizState extends State<Quiz> {
       setState(() {
         List<String> temp = List.of(selectedAnswers);
         selectedAnswers.clear();
-        activeScreen = ResultsScreen(temp);
+        activeScreen = ResultsScreen(
+          temp,
+          chosenAnswers: [],
+        );
       });
     }
   }
