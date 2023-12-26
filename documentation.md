@@ -19,3 +19,4 @@ Design Thinking Process
 5. Prototype: How could it work?
    -> Test it on the real audience
 
+Set objectives for each process. and design questions, and steps to achieve those objectives.
