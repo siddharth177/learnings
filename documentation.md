@@ -20,3 +20,6 @@ Design Thinking Process
    -> Test it on the real audience
 
 Set objectives for each process. and design questions, and steps to achieve those objectives.
+
+Plan Interview Template: [Design+Thinking+in+3+Steps+-+Plan+Your+Interview.pdf](https://github.com/siddharth177/repo/files/13768244/Design%2BThinking%2Bin%2B3%2BSteps%2B-%2BPlan%2BYour%2BInterview.pdf)
+
