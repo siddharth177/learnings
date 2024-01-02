@@ -1,3 +1,7 @@
+The importance of design Thinking
+what is design: architectureal, typography, software, problem solving etc
+
+
 Exercise: New Product or Service that improves the airline pre-flight experience
 
 What is the biggest pain point of flight onboarding?
@@ -6,18 +10,21 @@ What is the biggest pain point of flight onboarding?
 
 
 Design Thinking
+-> problem-solving     approach
     -> Developing a deep understanding of people's goals and creating experiences that match those.
     -> What people want to achieve and how they want to feel after achieving those.
-    -> You need to be clear about people's goals.
+    -> You need to be clear about people's goals to make their experience better.
     -> Help people meet their goals -> create passionate advocates
 
 Design Thinking Process
-1. Understand: Who is it for and what are their goals? (Understanding the geographic)
+1. Understand: who are we solving the problem for?
+   ->  Who is it for and what are their goals? (Understanding persons persona)
     -> Interview them to understand personas
 3. Envision: How can we help them meet their goals?
     -> Brainstorming techniques 
 5. Prototype: How could it work?
    -> Test it on the real audience
+   -> visual narrative on how your solutin will work and show it to first few user to get feedback/
 
 Set objectives for each process. and design questions, and steps to achieve those objectives.
 
